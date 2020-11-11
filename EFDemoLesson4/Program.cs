@@ -35,7 +35,6 @@ namespace EFDemoLesson4
             {
                 SeedDatabase(ctx);
 
-                ctx.Customers.RemoveRange(ctx.Customers);
                 Customer c = new Customer { FirstName = "Berg", LastName = "Bergson", Gender = Gender.Female, BonusPoints = 40000};
                 ctx.Customers.Add(c);
 
