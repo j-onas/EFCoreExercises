@@ -22,23 +22,6 @@ namespace EFDemoLesson4
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            Customer c = new Customer
-            {
-                Id = 1,
-                FirstName = "Björn",
-                LastName = "Strömberg",
-                BonusPoints = 45000,
-                Gender = Gender.Male
-            };
-
-            modelBuilder.Entity<Customer>().HasData(c);
-
-            modelBuilder.Entity<Sale>().HasData(new Sale
-            {
-                Id = 1,
-                DateOfPurchase = DateTime.Now,
-                CustomerId = 1,
-            });
         }
     }
 }
