@@ -1,61 +1,41 @@
 ﻿using System;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace EFDemoLesson4
 {
     class Program
     {
-        static void SeedDatabase(Context ctx)
+        //Uppgift 1: Visa i consolen namnet på den första kunden som heter Björn.
+        static void Main(string[] args)
+        {
+            using var ctx = new Context();
+            SeedDatabase(ctx);
+
+
+
+        }
+
+        private static void SeedDatabase(Context ctx)
         {
             ctx.RemoveRange(ctx.Customers);
             ctx.RemoveRange(ctx.Sales);
 
-            Customer c = new Customer
+            var customers = new List<Customer>
             {
-                FirstName = "Björn",
-                LastName = "Strömberg",
-                BonusPoints = 45000,
-                Gender = Gender.Male
+                new Customer{FirstName = "Björn", LastName = "Strömberg", BonusPoints = 45000, Gender = Gender.Male },
+                new Customer{FirstName = "Björn", LastName = "Andersson", BonusPoints = 660, Gender = Gender.Male},
+                new Customer{FirstName = "Lisa", LastName = "Andersson", BonusPoints = 900, Gender = Gender.Female},
+                new Customer{FirstName = "Klas", LastName = "Klasson", BonusPoints = 1000, Gender = Gender.Male},
+                new Customer{FirstName = "Kalle", LastName = "Anka", BonusPoints = 0, Gender = Gender.Male},
+                new Customer{FirstName = "Åsa", LastName = "Helgesson", BonusPoints = 10, Gender = Gender.Female},
+                new Customer{FirstName = "Björn", LastName = "Svensson", BonusPoints = 9000, Gender = Gender.Male},
+                new Customer{FirstName = "Åsa", LastName = "Lampa", BonusPoints = 70, Gender = Gender.Female},
+                new Customer{FirstName = "Kajsa", LastName = "Anka", BonusPoints = 450, Gender = Gender.Female}
             };
 
-            ctx.Customers.Add(c);
-
-            ctx.Sales.Add(new Sale
-            {
-                DateOfPurchase = DateTime.Now,
-                Customer = c,
-            });
+            ctx.Customers.AddRange(customers);
 
             ctx.SaveChanges();
-        }
-        static void Main(string[] args)
-        {
-            using(Context ctx = new Context())
-            {
-                SeedDatabase(ctx);
-
-                Customer c = new Customer { FirstName = "Berg", LastName = "Bergson", Gender = Gender.Female, BonusPoints = 40000};
-                ctx.Customers.Add(c);
-
-                Customer b = ctx.Customers.Single(c => c.FirstName == "Björn");
-                b.BonusPoints = 0;
-                ctx.Customers.Update(b);
-
-                var sales = ctx.Sales.ToList();
-
-                sales[0].Customer = c;
-                ctx.Update(sales[0]);
-
-                ctx.SaveChanges();
-
-                foreach (var sale in sales)
-                    Console.WriteLine("Id: " + sale.Id +
-                        "\nDatum: " + sale.DateOfPurchase +
-                        "\nCustomer Id: "+ sale.Customer.Id +
-                        "\nCustomer Name: " + sale.Customer.FirstName + " " + sale.Customer.LastName + 
-                        "\nCustomer Gender: " + sale.Customer.Gender);
-            }
         }
     }
 }
