@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EFDemoLesson4.Uppgifter
+namespace EFCoreMiniExercises.Uppgifter
 {
     class Task3_Solution
     {
-
-        public List<Customer> GetCustomersNamedBjorn(Context cxt)
+        public static List<Customer> GetCustomersNamedBjorn(Context cxt)
         {
-            //ToList() för att exekvera custumers
+            //ToList() kan användas för att att få tag på ett flertaligt resultat
             return cxt.Customers.Where(x => x.FirstName == "Björn").ToList();
         }
     }

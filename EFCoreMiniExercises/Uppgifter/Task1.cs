@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EFDemoLesson4.Uppgifter
+namespace EFCoreMiniExercises.Uppgifter
 {
     /// <summary>
     /// Skriv en metod som tar in en lista av kunder och returnerar första kunden som heter Björn
+    /// 
+    /// Nyckelord: .First(), lamda-funktioner 'c => c.XXX'
+    /// 
+    /// Rätt svar: {FirstName = "Björn", LastName = "Strömberg", BonusPoints = 45000, Gender = Gender.Male }
     /// </summary>
     public class Task1
     {
-     
+        public static Customer GetFirstCustomerNamedBjorn(Context ctx)
+        {
+            return null;
+        }
     }
 }

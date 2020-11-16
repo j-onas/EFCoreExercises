@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace EFDemoLesson4.Migrations
+namespace EFCoreMiniExercises.Migrations
 {
     public partial class lazy_loading : Migration
     {

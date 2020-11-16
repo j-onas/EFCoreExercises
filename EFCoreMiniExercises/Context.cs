@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace EFDemoLesson4
+namespace EFCoreMiniExercises
 {
     public class Context : DbContext
     {

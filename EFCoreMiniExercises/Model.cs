@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EFDemoLesson4
+namespace EFCoreMiniExercises
 {
     public enum Gender
     {
