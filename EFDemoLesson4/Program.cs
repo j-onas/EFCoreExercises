@@ -1,17 +1,17 @@
-﻿using System;
+﻿using EFDemoLesson4.Uppgifter;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace EFDemoLesson4
 {
-    class Program
+    public class Program
     {
-        //Uppgift 1: Visa i consolen namnet på den första kunden som heter Björn.
-        static void Main(string[] args)
+
+        public static void Main(string[] args)
         {
             using var ctx = new Context();
             SeedDatabase(ctx);
-
-
 
         }
 

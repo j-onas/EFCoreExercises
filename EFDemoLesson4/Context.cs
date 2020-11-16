@@ -3,7 +3,7 @@ using System;
 
 namespace EFDemoLesson4
 {
-    class Context : DbContext
+    public class Context : DbContext
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Sale> Sales { get; set; }
