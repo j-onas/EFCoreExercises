@@ -6,7 +6,7 @@ using System.Text;
 namespace EFCoreMiniExercises.Uppgifter
 {
     /// <summary>
-    /// Skriv en metod som tar in en lista av kunder och returnerar första kunden som heter Björn
+    /// Skriv en metod som tar in contextet och returnerar första kunden som heter Björn
     /// 
     /// Nyckelord: .First(), lamda-funktioner 'c => c.XXX'
     /// 

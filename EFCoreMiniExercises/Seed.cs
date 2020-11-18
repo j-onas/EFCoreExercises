@@ -13,7 +13,7 @@ namespace EFCoreMiniExercises
 
             var customers = new List<Customer>
             {
-                new Customer{FirstName = "Björn", LastName = "Strömberg", BonusPoints = 45000, Gender = Gender.Male },
+                new Customer{FirstName = "Björn", LastName = "Strömberg", BonusPoints = 45000, Gender = Gender.Male, Sales= new List<Sale>{ new Sale { DateOfPurchase= DateTime.Now } } },
                 new Customer{FirstName = "Björn", LastName = "Andersson", BonusPoints = 660, Gender = Gender.Male},
                 new Customer{FirstName = "Lisa", LastName = "Andersson", BonusPoints = 900, Gender = Gender.Female},
                 new Customer{FirstName = "Klas", LastName = "Klasson", BonusPoints = 1000, Gender = Gender.Male},
@@ -25,6 +25,7 @@ namespace EFCoreMiniExercises
             };
 
             ctx.Customers.AddRange(customers);
+
 
             ctx.SaveChanges();
         }

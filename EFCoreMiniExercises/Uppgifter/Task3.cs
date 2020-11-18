@@ -6,7 +6,7 @@ using System.Text;
 namespace EFCoreMiniExercises.Uppgifter
 {
     /// <summary>
-    /// Skriv en metod som tar in en lista av kunder och returnerar ALLA kunder som heter Björn
+    /// Skriv en metod som tar in contextet och returnerar ALLA kunder som heter Björn
     /// </summary>
     public class Task3
     {
