@@ -16,6 +16,12 @@ namespace EFCoreMiniExercises.Explanations
             
             //Här tar vi tar ut sales men bara om customer har några.
             var sales = q.Where(x => x.Sales.Any()).Select(x => x.Sales);
+
+            var sales1 = (from c in ctx.Customers
+                        join s in ctx.Sales on c.Id equals s.Customer.Id
+                        select new { Sales = s, Customer = c }).ToList();
+
+
         }
     }
 }
