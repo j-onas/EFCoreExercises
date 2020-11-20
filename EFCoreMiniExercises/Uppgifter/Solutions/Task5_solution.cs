@@ -9,6 +9,11 @@ namespace EFCoreMiniExercises.Uppgifter
         public List<Customer> GetCustomersSortedByFirstName(Context ctx)
         {
             return ctx.Customers.OrderBy(x => x.FirstName).ToList();
+
+            //Alternative
+            //return (from c in ctx.Customers
+            //        orderby c.FirstName
+            //        select c).ToList();
         }
     }
 }

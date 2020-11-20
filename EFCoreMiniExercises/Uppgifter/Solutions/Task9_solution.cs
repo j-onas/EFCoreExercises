@@ -6,9 +6,13 @@ namespace EFCoreMiniExercises.Uppgifter
 {
     class Task9_Solution
     {
-        public List<string> GetCustomersWithSales1(Context ctx)
+        public List<string> GetCustomersLastName(Context ctx)
         {
             return ctx.Customers.Select(x => x.LastName).ToList();
+
+            //Alternative
+            //return (from c in ctx.Customers
+            //        select c.LastName).ToList();
         }
     }
 }

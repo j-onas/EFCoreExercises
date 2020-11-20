@@ -10,7 +10,7 @@ namespace EFCoreMiniExercises.Uppgifter
     /// </summary>
     public class Task3
     {
-        public static List<Customer> GetCustomersNamedBjorn(Context cxt)
+        public static List<Customer> GetCustomersNamedBjorn(Context ctx)
         {
             return null;
         }

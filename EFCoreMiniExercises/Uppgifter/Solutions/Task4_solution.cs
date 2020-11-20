@@ -9,6 +9,11 @@ namespace EFCoreMiniExercises.Uppgifter
         public static int CountFemaleCustomers(Context ctx)
         {
             return ctx.Customers.Count(c => c.Gender == Gender.Female);
+
+            //Alternative
+            //return (from c in ctx.Customers
+            //        where c.Gender == Gender.Female
+            //        select c).Count();
         }
     }
 }

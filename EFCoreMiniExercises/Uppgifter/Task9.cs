@@ -10,7 +10,7 @@ namespace EFCoreMiniExercises.Uppgifter
     /// </summary>
     public class Task9
     {
-        public List<string> GetCustomersAndSales(Context ctx)
+        public List<string> GetCustomersLastName(Context ctx)
         {
             return null;
         }

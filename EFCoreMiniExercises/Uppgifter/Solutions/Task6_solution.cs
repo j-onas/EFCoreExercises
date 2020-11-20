@@ -12,6 +12,11 @@ namespace EFCoreMiniExercises.Uppgifter
                 .OrderBy(x => x.FirstName)
                 .ThenBy(x => x.LastName)
                 .ToList();
+
+            //Alternative
+            //return (from c in ctx.Customers
+            //        orderby c.FirstName, c.LastName
+            //        select c).ToList();
         }
     }
 }
