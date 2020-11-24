@@ -15,6 +15,7 @@ namespace EFCoreMiniExercises.Uppgifter
             //        //where c.Sales.Any()
             //        //where c.Sales.Count > 0
             //        select c).ToList();
+            return null;
         }
     }
 }
