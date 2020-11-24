@@ -12,7 +12,8 @@ namespace EFCoreMiniExercises.Uppgifter
     {
         public static int CountFemaleCustomers(Context ctx)
         {
-            return -1;
+            var query = ctx.Customers.Count(c => c.Gender > 0);
+            return query;
         }
     }
 }

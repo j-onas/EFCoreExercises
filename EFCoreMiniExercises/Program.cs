@@ -20,8 +20,8 @@ namespace EFCoreMiniExercises
 
             //Console.WriteLine(Task1.GetFirstCustomerNamedBjorn(ctx));
             //Console.WriteLine(Task2.GetCustomerNamedBjornSvensson(ctx));
-            Console.WriteLine(Task3.GetCustomersNamedBjorn(ctx));
-            
+            //Console.WriteLine(Task3.GetCustomersNamedBjorn(ctx));
+            Console.WriteLine(Task4.CountFemaleCustomers(ctx));
 
         }
     }
