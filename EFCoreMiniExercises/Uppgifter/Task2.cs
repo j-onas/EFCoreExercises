@@ -12,7 +12,8 @@ namespace EFCoreMiniExercises.Uppgifter
     {
         public static Customer GetCustomerNamedBjornSvensson(Context ctx)
         {
-            return null;
+            var query = ctx.Customers.FirstOrDefault(c => c.FirstName == "Björn" && c.LastName == "Svensson");
+            return query;
         }
     }
 }
