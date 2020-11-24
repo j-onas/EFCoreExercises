@@ -25,7 +25,8 @@ namespace EFCoreMiniExercises
             //Console.WriteLine(Task5.GetCustomersSortedByFirstName(ctx));
             //Console.WriteLine(Task6.GetCustomersSortedByFirstNameAndLastName(ctx));
             //Console.WriteLine(Task7.GetCustomersWithSales(ctx));
-            Console.WriteLine(Task8.GetTopThreeCustomersWithHighestPoints(ctx));
+            //Console.WriteLine(Task8.GetTopThreeCustomersWithHighestPoints(ctx));
+            Console.WriteLine(Task9.GetCustomersLastName(ctx));
         }
     }
 }

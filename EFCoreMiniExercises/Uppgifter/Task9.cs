@@ -10,9 +10,10 @@ namespace EFCoreMiniExercises.Uppgifter
     /// </summary>
     public class Task9
     {
-        public List<string> GetCustomersLastName(Context ctx)
+        public static List<string> GetCustomersLastName(Context ctx)
         {
-            return null;
+            var query = ctx.Customers.Select(c => c.LastName).ToList();
+            return query;
         }
     }
 }
