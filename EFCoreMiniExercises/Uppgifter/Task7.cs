@@ -12,9 +12,7 @@ namespace EFCoreMiniExercises.Uppgifter
     {
         public static List<Sale> GetCustomersWithSales(Context ctx)
         {
-            var query = ctx;
-
-            return query;
+            return null;
         }
     }
 }
