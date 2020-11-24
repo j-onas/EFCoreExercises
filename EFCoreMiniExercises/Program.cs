@@ -22,8 +22,8 @@ namespace EFCoreMiniExercises
             //Console.WriteLine(Task2.GetCustomerNamedBjornSvensson(ctx));
             //Console.WriteLine(Task3.GetCustomersNamedBjorn(ctx));
             //Console.WriteLine(Task4.CountFemaleCustomers(ctx));
-            Console.WriteLine(Task5.GetCustomersSortedByFirstName(ctx));
-
+            //Console.WriteLine(Task5.GetCustomersSortedByFirstName(ctx));
+            Console.WriteLine(Task6.GetCustomersSortedByFirstNameAndLastName(ctx));
         }
     }
 }

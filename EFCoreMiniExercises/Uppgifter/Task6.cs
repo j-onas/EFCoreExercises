@@ -10,9 +10,10 @@ namespace EFCoreMiniExercises.Uppgifter
     /// /// </summary>
     public class Task6
     {
-        public List<Customer> GetCustomersSortedByFirstNameAndLastName(Context ctx)
+        public static List<Customer> GetCustomersSortedByFirstNameAndLastName(Context ctx)
         {
-            return null;
+            var query = ctx.Customers.OrderBy(c => c.FirstName).ThenBy(c => c.LastName).ToList(); ;
+            return query;
         }
     }
 }
