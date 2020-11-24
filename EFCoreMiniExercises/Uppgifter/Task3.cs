@@ -12,7 +12,8 @@ namespace EFCoreMiniExercises.Uppgifter
     {
         public static List<Customer> GetCustomersNamedBjorn(Context ctx)
         {
-            return null;
+            var query = ctx.Customers.Where(c => c.FirstName == "Björn").ToList();    //OrderBy(c => c.FirstName == "Björn").ToList();
+            return query;
         }
     }
 }

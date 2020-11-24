@@ -19,7 +19,9 @@ namespace EFCoreMiniExercises
             // Kör din task här för att testa att den fungerar som den ska
 
             //Console.WriteLine(Task1.GetFirstCustomerNamedBjorn(ctx));
-            Console.WriteLine(Task2.GetCustomerNamedBjornSvensson(ctx));
+            //Console.WriteLine(Task2.GetCustomerNamedBjornSvensson(ctx));
+            Console.WriteLine(Task3.GetCustomersNamedBjorn(ctx));
+            
 
         }
     }
