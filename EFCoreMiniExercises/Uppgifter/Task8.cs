@@ -10,9 +10,10 @@ namespace EFCoreMiniExercises.Uppgifter
     /// </summary>
     public class Task8
     {
-        public List<Customer> GetTopThreeCustomersWithHighestPoints(Context ctx)
-        {
-            return null;
+        public static List<Customer> GetTopThreeCustomersWithHighestPoints(Context ctx) {
+
+            var query = ctx.Customers.OrderByDescending(c => c.BonusPoints).Take(3).ToList();
+            return query;
         }
     }
 }
