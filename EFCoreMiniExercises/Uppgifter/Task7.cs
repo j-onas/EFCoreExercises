@@ -10,9 +10,11 @@ namespace EFCoreMiniExercises.Uppgifter
     /// </summary>
     public class Task7
     {
-        public List<Sale> GetCustomersWithSales(Context ctx)
+        public static List<Sale> GetCustomersWithSales(Context ctx)
         {
-            return null;
+            var query = ;
+
+            return query;
         }
     }
 }
